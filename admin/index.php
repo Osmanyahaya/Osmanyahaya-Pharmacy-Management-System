@@ -21,7 +21,7 @@
         <section class="content  text-dark">
           <div class="container-fluid">
             <?php 
-            //error_reporting(0);
+            error_reporting(0);
               if(!file_exists($page.".php") && !is_dir($page)){
                   include '404.html';
               }else{

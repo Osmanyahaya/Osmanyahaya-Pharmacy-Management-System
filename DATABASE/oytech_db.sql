@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 01, 2023 at 05:12 PM
+-- Generation Time: Apr 05, 2023 at 01:33 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -262,7 +262,21 @@ INSERT INTO `logs` (`id`, `user_id`, `action_made`, `date_created`) VALUES
 (47, 1, ' added stock of [id=2212001] [total cost=23040] into the stock list.', '2022-12-29 06:11:56'),
 (48, 1, 'Logged in the system.', '2023-01-01 15:33:11'),
 (49, 1, 'Logged out.', '2023-01-01 15:46:03'),
-(50, 1, 'Logged in the system.', '2023-01-01 16:02:55');
+(50, 1, 'Logged in the system.', '2023-01-01 16:02:55'),
+(51, 1, 'Logged in the system.', '2023-03-16 08:35:04'),
+(52, 1, 'Logged out.', '2023-03-16 08:35:12'),
+(53, 1, 'Logged in the system.', '2023-03-16 08:36:17'),
+(54, 1, ' Made sales  of [invoice=2303160001] [amount=4.50].', '2023-03-16 08:38:32'),
+(55, 1, ' added stock of [id=2303001] [total cost=1771.8] into the stock list.', '2023-03-16 08:43:43'),
+(56, 1, ' Made sales  of [invoice=2303160002] [amount=48.00].', '2023-03-16 08:47:13'),
+(57, 1, 'Logged out.', '2023-03-16 08:52:43'),
+(58, 1, 'Logged in the system.', '2023-03-21 08:10:27'),
+(59, 1, ' Made sales  of [invoice=2303210001] [amount=524.00].', '2023-03-21 08:53:27'),
+(60, 1, ' updated the details of [id=3] [name=PILEX CAPS  -HIMALAYA] product .', '2023-03-21 09:00:58'),
+(61, 1, ' Made sales  of [invoice=2303210002] [amount=110.00].', '2023-03-21 09:01:21'),
+(62, 1, ' added stock of [id=2303002] [total cost=2023.7] into the stock list.', '2023-03-21 11:26:22'),
+(63, 1, ' Made sales  of [invoice=2303210003] [amount=10.00].', '2023-03-21 17:08:50'),
+(64, 1, ' Made sales  of [invoice=2303210004] [amount=82.00].', '2023-03-21 17:10:20');
 
 -- --------------------------------------------------------
 
@@ -292,12 +306,12 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`prod_name`, `prod_desc`, `prod_price`, `prod_cprice`, `cat_id`, `prod_qty`, `reorder`, `serial`, `exdate`, `measure`, `prod_id`, `exdate2`, `prod_wprice`, `branch_id`) VALUES
-('EVECARE  CAPS', '', '68.00', '51.84', 30, -298, 2, 'SKU1001', '2022-12-27', '100 CAPS', 1, '2022-11-26', '0.00', 0),
-('LIV 52 CAPS', 'HIMALAYA', '60.00', '50.12', 30, -388, 4, 'SKU1002', '2024-01-01', '100 CAPS', 2, '', '0.00', 0),
-('PILEX CAPS  -HIMALAYA', '', '48.00', '36.75', 30, 261, 1, 'SKU1003', '2024-11-01', '100 CAPS', 3, '', '0.00', 0),
+('EVECARE  CAPS', '', '68.00', '51.84', 30, -278, 2, 'SKU1001', '2022-12-27', '100 CAPS', 1, '2022-11-26', '0.00', 0),
+('LIV 52 CAPS', 'HIMALAYA', '60.00', '50.12', 30, -378, 4, 'SKU1002', '2024-01-01', '100 CAPS', 2, '', '0.00', 0),
+('PILEX CAPS  -HIMALAYA', '', '55.00', '50.75', 30, 302, 0, 'SKU1003', '2024-11-01', '100 CAPS', 3, '', '0.00', 0),
 ('PYLIN CAPS', 'DR GOOD', '64.00', '44.00', 30, 0, 3, 'SKU1004', '2023-01-01', '100 CAPS', 4, '', '0.00', 0),
-('TENOFOVIR CAPS 300mg', '', '118.00', '89.78', 30, 2, 1, 'SKU1005', '2024-01-01', '30 CAPS', 5, '', '0.00', 0),
-('PILEX OINTMENT -  HIMALAYA', '', '48.00', '35.54', 30, 1, 1, 'SKU1006', '2024-12-01', '30g', 6, '', '0.00', 0),
+('TENOFOVIR CAPS 300mg', '', '118.00', '89.78', 30, 0, 1, 'SKU1005', '2024-01-01', '30 CAPS', 5, '', '0.00', 0),
+('PILEX OINTMENT -  HIMALAYA', '', '48.00', '35.54', 30, 0, 1, 'SKU1006', '2024-12-01', '30g', 6, '', '0.00', 0),
 ('PHLEBODIA TABS- INNOTHERA', '', '115.00', '87.00', 30, 4, 1, 'SKU1007', '2026-09-01', '15 TABS', 7, '', '0.00', 0),
 ('COLDRILIF CAPS - ENTRANCE', '', '6.00', '4.25', 30, 11, 3, 'SKU1008', '2024-10-01', '10 TABS', 8, '', '0.00', 0),
 ('FLUREST TABS', 'LUEX', '24.00', '15.00', 30, 6, 7, 'SKU1009', '2023-04-01', '10 TABS', 9, '', '0.00', 0),
@@ -396,10 +410,10 @@ INSERT INTO `product` (`prod_name`, `prod_desc`, `prod_price`, `prod_cprice`, `c
 ('AMOKSIKLAV 457 SUSPENSION - UK', '', '34.00', '25.90', 30, 0, 1, 'SKU1102', '2022-11-02', '100', 102, '', '0.00', 0),
 ('AZITHROMYCIN SUSPENSION -ZYMAX SUSPENSION', '', '14.00', '8.89', 30, 2, 5, 'SKU1103', '2024-01-01', '100', 103, '', '0.00', 0),
 ('SUSP AZITHROMYCIN - AZITEX', '', '18.00', '10.80', 30, 3, 2, 'SKU1104', '2024-08-01', '100', 104, '', '0.00', 0),
-('PARA Exeter 500 TAB', 'EXETER', '3.00', '2.20', 30, 108, 10, 'SKU1105', '2026-03-01', '500', 105, '', '0.00', 0),
+('PARA Exeter 500 TAB', 'EXETER', '3.00', '2.20', 30, 107, 10, 'SKU1105', '2026-03-01', '500', 105, '', '0.00', 0),
 ('PANADOL ADVANCE TABLET', '', '10.00', '7.21', 30, 0, 3, 'SKU1106', '2024-05-01', '500', 106, '', '0.00', 0),
 ('PANADOL EXTRA ADVANCE per PACK', '', '30.00', '19.80', 30, 0, 4, 'SKU1107', '2024-08-01', '100', 107, '', '0.00', 0),
-('PANACIN TABLET per STRIP', '', '1.50', '0.85', 30, 6, 10, 'SKU1108', '2025-04-01', '100', 108, '', '0.00', 0),
+('PANACIN TABLET per STRIP', '', '1.50', '0.85', 30, 5, 10, 'SKU1108', '2025-04-01', '100', 108, '', '0.00', 0),
 ('TRAMADOL CAPSULE  per BLISTER - HOVID', '', '15.00', '10.00', 30, 40, 5, 'SKU1109', '2024-08-01', '100', 109, '', '0.00', 0),
 ('DORETA CAPSULE per CAP', '', '4.00', '2.80', 30, 0, 10, 'SKU1110', '2023-07-01', '100', 110, '', '0.00', 0),
 ('TREXAMOL CAPSULE per CAP', '', '2.50', '1.76', 30, 0, 12, 'SKU1111', '2024-04-01', '100', 111, '', '0.00', 0),
@@ -424,11 +438,11 @@ INSERT INTO `product` (`prod_name`, `prod_desc`, `prod_price`, `prod_cprice`, `c
 ('MAGNESSIUM TRISC. - MGT', '', '5.00', '3.50', 30, 5, 3, 'SKU1130', '2025-02-01', '100', 130, '', '0.00', 0),
 ('MILK OF MAGNESSIA', 'MILK', '3.00', '1.40', 30, 0, 5, 'SKU1131', '2023-04-01', '100', 131, '', '0.00', 0),
 ('AMPICLOX CAPS per STRIP', 'LEPTAB', '4.50', '3.37', 30, 4, 5, 'SKU1132', '2023-05-02', '100', 132, '', '0.00', 0),
-('CHLORDIAZEPOXIDE CAPS -  LIBRIUM LEPTAB', '', '2.00', '1.38', 30, 23, 10, 'SKU1133', '2023-10-01', '100', 133, '', '0.00', 0),
+('CHLORDIAZEPOXIDE CAPS -  LIBRIUM LEPTAB', '', '2.00', '1.38', 30, 21, 10, 'SKU1133', '2023-10-01', '100', 133, '', '0.00', 0),
 ('INDOMETHAZINE -  INDOCID Leptab', '', '1.00', '0.40', 30, 46, 10, 'SKU1134', '2023-11-01', '100', 134, '', '0.00', 0),
-('AKOMA  APC', '', '1.00', '0.50', 30, 36, 15, 'SKU1135', '2023-01-01', '100', 135, '', '0.00', 0),
+('AKOMA  APC', '', '1.00', '0.50', 30, 34, 15, 'SKU1135', '2023-01-01', '100', 135, '', '0.00', 0),
 ('BISACODYL TABS', '', '1.00', '0.35', 30, 95, 10, 'SKU1136', '2026-06-05', '100', 136, '', '0.00', 0),
-('PENICILLIN V TABS', '', '2.00', '0.86', 30, 30, 20, 'SKU1137', '2024-01-01', '100', 137, '', '0.00', 0),
+('PENICILLIN V TABS', '', '2.00', '0.86', 30, 28, 20, 'SKU1137', '2024-01-01', '100', 137, '', '0.00', 0),
 ('IBUPROFEN 200 TABS Eskay', '', '1.00', '0.51', 30, 50, 7, 'SKU1138', '2025-01-20', '100', 138, '', '0.00', 0),
 ('IBUPROFEN TAB 400mg -ENAFEN', '', '2.50', '1.80', 30, 38, 15, 'SKU1139', '2024-09-01', '100', 139, '', '0.00', 0),
 ('DICLOFENAC 75MG CAPS per STRIP - NAKLOFEN DUO', '', '30.00', '22.00', 30, 2, 2, 'SKU1140', '2024-05-01', '100', 140, '', '0.00', 0),
@@ -710,7 +724,7 @@ INSERT INTO `product` (`prod_name`, `prod_desc`, `prod_price`, `prod_cprice`, `c
 ('IV CLINDAMYCIN  150MG per AMP', '', '22.00', '15.00', 28, 10, 2, 'SKU1388', '2024-02-01', '1ML', 417, '', '0.00', 0),
 ('POLYGNAX OVULES per STRIP', '', '54.00', '41.00', 30, 12, 2, 'SKU1399', '2024-02-01', '1 PACK', 418, '', '0.00', 0),
 ('KETAZOL CREAM', '', '10.00', '7.63', 30, 0, 2, 'SKU1400', '2024-04-04', 'SHALINA', 419, '', '0.00', 0),
-('EPHEDRINE IV 30MG  / AMP', '', '27.00', '20.80', 28, 10, 4, 'SKU1399', '2024-02-01', '2ML', 420, '', '0.00', 0),
+('EPHEDRINE IV 30MG  / AMP', '', '27.00', '20.80', 28, 9, 4, 'SKU1399', '2024-02-01', '2ML', 420, '', '0.00', 0),
 ('DREZ V Gel', '', '38.00', '28.61', 30, 4, 2, 'SKU1401', '2023-04-01', '1 PACK', 421, '', '0.00', 0),
 ('CAMEL ANTISEPTIC 250ML', '', '18.00', '12.32', 30, 0, 1, 'SKU1402', '2024-09-22', '1 PACK', 422, '', '0.00', 0),
 ('DICLOFENAC  INJ 75MG / AMPOULE - TROGE', '', '2.00', '1.15', 28, 100, 7, 'SKU1401', '2024-05-01', '2ML', 423, '', '0.00', 0),
@@ -1199,7 +1213,11 @@ CREATE TABLE `stockin` (
 
 INSERT INTO `stockin` (`stockin_id`, `prod_id`, `qty`, `date_created`, `supplier_id`, `prod_exdate`, `cost_price`, `id`) VALUES
 (2212001, 3, 200, '0000-00-00 00:00:00', 0, '', '36.75', 7),
-(2212001, 91, 1000, '0000-00-00 00:00:00', 0, '', '15.69', 8);
+(2212001, 91, 1000, '0000-00-00 00:00:00', 0, '', '15.69', 8),
+(2303001, 1, 20, '0000-00-00 00:00:00', 0, '', '51.84', 9),
+(2303001, 3, 20, '0000-00-00 00:00:00', 0, '', '36.75', 10),
+(2303002, 3, 30, '0000-00-00 00:00:00', 0, '', '50.75', 11),
+(2303002, 2, 10, '0000-00-00 00:00:00', 0, '', '50.12', 12);
 
 -- --------------------------------------------------------
 
@@ -1239,7 +1257,9 @@ CREATE TABLE `stock_list` (
 --
 
 INSERT INTO `stock_list` (`sid`, `date_created`, `amount`, `user_id`, `id`, `supplier_id`, `invoice`) VALUES
-('2212001', '2022-12-29 06:11:56', '23040.00', 1, 4, 13, '100');
+('2212001', '2022-12-29 06:11:56', '23040.00', 1, 4, 13, '100'),
+('2303001', '2023-03-16 08:43:42', '1771.80', 1, 5, 13, '9737'),
+('2303002', '2023-03-21 11:26:22', '2023.70', 1, 6, 13, '0002');
 
 -- --------------------------------------------------------
 
@@ -1347,7 +1367,13 @@ CREATE TABLE `transaction_list` (
 
 INSERT INTO `transaction_list` (`id`, `user_id`, `cash_tendered`, `balance`, `total`, `client_id`, `discount`, `code`, `date_created`, `date_updated`, `amount`, `amount_due`, `status`, `type`) VALUES
 (2, 1, '86.00', '0.00', '86.00', '', '0.00', '2212280001', '2022-12-28 12:53:51', '2022-12-28 12:53:51', '86.00', '0.00', 1, 1),
-(3, 1, '140.00', '0.00', '144.00', '', '4.00', '2212290001', '2022-12-29 05:39:05', '2022-12-29 05:39:05', '140.00', '0.00', 1, 1);
+(3, 1, '140.00', '0.00', '144.00', '', '4.00', '2212290001', '2022-12-29 05:39:05', '2022-12-29 05:39:05', '140.00', '0.00', 1, 1),
+(4, 1, '5.00', '0.50', '4.50', '', '0.00', '2303160001', '2023-03-16 08:38:31', '2023-03-16 08:38:31', '4.50', '0.00', 1, 1),
+(5, 1, '48.00', '0.00', '48.00', '48', '0.00', '2303160002', '2023-03-16 08:47:13', '2023-03-16 08:47:13', '48.00', '0.00', 1, 1),
+(6, 1, '524.00', '0.00', '524.00', '', '0.00', '2303210001', '2023-03-21 08:53:26', '2023-03-21 08:53:26', '524.00', '0.00', 1, 1),
+(7, 1, '110.00', '0.00', '110.00', '', '0.00', '2303210002', '2023-03-21 09:01:21', '2023-03-21 09:01:21', '110.00', '0.00', 1, 1),
+(8, 1, '10.00', '0.00', '10.00', '', '0.00', '2303210003', '2023-03-21 17:08:50', '2023-03-21 17:08:50', '10.00', '0.00', 1, 1),
+(9, 1, '82.00', '0.00', '82.00', '', '0.00', '2303210004', '2023-03-21 17:10:20', '2023-03-21 17:10:20', '82.00', '0.00', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -1374,7 +1400,19 @@ INSERT INTO `transaction_products` (`id`, `transaction_id`, `product_id`, `price
 (3, '2', 6, '48.00', 1, '35.54'),
 (4, '2', 265, '38.00', 1, '28.00'),
 (5, '3', 3, '48.00', 1, '36.75'),
-(6, '3', 6, '48.00', 2, '35.54');
+(6, '3', 6, '48.00', 2, '35.54'),
+(7, '4', 105, '3.00', 1, '2.20'),
+(8, '4', 108, '1.50', 1, '0.85'),
+(9, '5', 3, '48.00', 1, '36.75'),
+(10, '6', 3, '48.00', 5, '36.75'),
+(11, '6', 5, '118.00', 2, '89.78'),
+(12, '6', 6, '48.00', 1, '35.54'),
+(13, '7', 3, '55.00', 2, '50.75'),
+(14, '8', 133, '2.00', 2, '1.38'),
+(15, '8', 135, '1.00', 2, '0.50'),
+(16, '8', 137, '2.00', 2, '0.86'),
+(17, '9', 3, '55.00', 1, '50.75'),
+(18, '9', 420, '27.00', 1, '20.80');
 
 -- --------------------------------------------------------
 
@@ -1590,7 +1628,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
 -- AUTO_INCREMENT for table `category`
@@ -1614,7 +1652,7 @@ ALTER TABLE `expense`
 -- AUTO_INCREMENT for table `logs`
 --
 ALTER TABLE `logs`
-  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
 
 --
 -- AUTO_INCREMENT for table `product`
@@ -1644,19 +1682,19 @@ ALTER TABLE `service_transaction_list`
 -- AUTO_INCREMENT for table `stockin`
 --
 ALTER TABLE `stockin`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `stockin_cart`
 --
 ALTER TABLE `stockin_cart`
-  MODIFY `stockin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `stockin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `stock_list`
 --
 ALTER TABLE `stock_list`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `supplier`
@@ -1680,13 +1718,13 @@ ALTER TABLE `task`
 -- AUTO_INCREMENT for table `transaction_list`
 --
 ALTER TABLE `transaction_list`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `transaction_products`
 --
 ALTER TABLE `transaction_products`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `transaction_services`
